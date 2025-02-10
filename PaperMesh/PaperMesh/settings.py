@@ -50,7 +50,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'Django_Project_ecommerce_website.urls'
+ROOT_URLCONF = 'PaperMesh.urls'
 
 TEMPLATES = [
     {
@@ -71,7 +71,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'Django_Project_ecommerce_website.wsgi.application'
+WSGI_APPLICATION = 'PaperMesh.wsgi.application'
 
 
 # Database
