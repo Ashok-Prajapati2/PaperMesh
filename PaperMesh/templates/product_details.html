@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block title %}{{ product.product_name }}{% endblock %}
+{% block content %}
+<div class="container my-5 bg-white pt-5">
+    <div class="row">
+        <!-- Product Image -->
+        <div class="col-md-6">
+            <div class="product-image text-center">
+                <img src="/media/{{ product.item_img }}" alt="{{ product.item_name }}" class="img-fluid" style="max-height: 500px;">
+            </div>
+        </div>
+        <!-- Product Details -->
+        <div class="col-md-6">
+            <h1 class="product-title">{{ product.item_name }}</h1>
+            <div class="product-price my-3">
+                <span class="h3 text-danger">${{ product.price }}</span>
+            </div>
+            <div class="product-description my-4">
+                <p>{{ product.product_description|default:"No description available." }}</p>
+            </div>
+            <div class="product-actions my-4">
+                <button class="btn btn-primary btn-lg me-2">Add to Cart</button>
+                <button class="btn btn-outline-secondary btn-lg">Buy Now</button>
+            </div>
+            <div class="product-specs mt-4">
+                <h4>Product Details</h4>
+                <ul class="list-unstyled">
+                    <li><strong>Category:</strong> {{ product.category.category_name }}</li>
+                    <li><strong>Product ID:</strong> {{ product.product_id }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Customer Reviews Section -->
+    <div class="row mt-5">
+        <div class="col-12">
+            <h3>Customer Reviews</h3>
+            <div class="card">
+                <div class="card-body">
+                    <p>No reviews yet. Be the first to review this product!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

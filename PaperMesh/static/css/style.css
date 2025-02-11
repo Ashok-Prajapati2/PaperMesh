@@ -1044,3 +1044,14 @@ input.mail_bt::placeholder {
 
 
 /* contact section start */
+
+/* Add this to ensure the product details page has a white background */
+.product-details-page {
+    background-color: #fff;
+}
+
+/* Ensure the container has a white background */
+.bg-white {
+    background-color: #fff !important;
+    padding-top: 3rem; /* Adjust this value as needed */
+}
